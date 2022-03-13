@@ -14,15 +14,15 @@ function keyDownHandler(e) {
 		upPressed = true;
 	}
 
-	elseif(e.keyCode == 40) {
+	else if(e.keyCode == 40) {
 		downPressed = true;
 	}
 
-	elseif(e.keyCode == 37) {
+	else if(e.keyCode == 37) {
 		leftPressed = true;
 	}
 
-	elseif(e.keyCode == 39) {
+	else if(e.keyCode == 39) {
 		rightPressed = true;
 	}
 }
