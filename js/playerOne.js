@@ -1,5 +1,20 @@
 let playerOneIdle = [{}, {}, {}];
-let playerOneWalking = [{}, {}, {}, {}, {}, {}];
+let playerOneMoveFWD = [{}, {}, {}, {}, {}, {}];
+let playerOneMoveBack = [{}, {}, {}, {}, {}, {}];
+let playerOneJump = [{}, {}, {}, {}, {}, {}];
+let playerOneCrouch = [{}, {}, {}, {}, {}, {}];
+let playerOneFwdSault = [{}, {}, {}, {}, {}, {}];
+let playerOneBackSault = [{}, {}, {}, {}, {}, {}];
+let playerOneJab = [{}, {}, {}, {}, {}, {}];
+let playerOneRoundHouse = [{}, {}, {}, {}, {}, {}];
+let playerOneThrustToNeck = [{}, {}, {}, {}, {}, {}];
+let playerOneReverseKick = [{}, {}, {}, {}, {}, {}];
+let playerOneThrustToHead = [{}, {}, {}, {}, {}, {}];
+let playerOneLegKick = [{}, {}, {}, {}, {}, {}];
+let playerOneFlyingKick = [{}, {}, {}, {}, {}, {}];
+let playerOneLegSweep = [{}, {}, {}, {}, {}, {}];
+let playerOneUnderArmSweep = [{}, {}, {}, {}, {}, {}];
+let playerOneChestKick = [{}, {}, {}, {}, {}, {}];
 
 let playerOneState = {state: playerOneIdle};
 
