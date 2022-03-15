@@ -16,7 +16,7 @@ let playerOneLegSweep = [{}, {}, {}, {}, {}, {}];
 let playerOneUnderArmSweep = [{}, {}, {}, {}, {}, {}];
 let playerOneChestKick = [{}, {}, {}, {}, {}, {}];
 
-let playerOneState = {state: playerOneIdle};
+let playerOneState = {state: playerOneIdle, frames: 3, autoRepeat = false};
 
 let upPressed = false;
 let downPressed = false;
@@ -40,4 +40,31 @@ function keyDownHandler(e) {
 	else if(e.keyCode == 39) {
 		rightPressed = true;
 	}
+}
+
+function drawPlayerOne() {
+
+	p1FrameCount++;
+
+	if(p1CurrentFrame % frameSpeed == 0) {
+		p1CurrentFrame++;
+	}
+
+	if(p1CurrentFrame >= playerOneState.frames && playerOneState.autoRepeat) {
+		p1FrameCount = 0;
+		p1CurrentFrame = 0;
+	}
+
+	else if(p1CurrentFrame >= playerOneState.frames && !playerOneState.autoRepeat) {
+		p1FrameCount = 0;
+		p1CurrentFrame = 0;
+		frameSpeed = 0;
+		
+		if(p1X > p2X) {
+			if(playerOneState.state == '') {
+				playerOneState = {state: playerOneIdle, frames: 3, autoRepeat = true};
+			}
+		}
+	}
+
 }
