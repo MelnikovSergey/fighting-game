@@ -27,10 +27,6 @@ a {
   color: inherit;
 }
 
-h1 {
-  margin: 0;
-}
-
 .splash-screen {
   width: 100vw;
   height: 100vh;
@@ -50,17 +46,28 @@ h1 {
   max-width: 500px;
 }
 
-.title h1 {
+.title span {
+  font-weight: 700;
   background: -webkit-linear-gradient(rgb(255, 18, 18) 30%, rgb(255, 215, 38));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.lowercase {
+  text-transform: lowercase;	
+}
+
 .title-top {
+  font-size: 5rem;
   transform: skew(-10deg) rotate(-10deg) translateX(-2rem);
 }
 
+.title-middle {
+  min-height: .8em;
+}
+
 .title-bottom {
+  font-size: 5rem;
   transform: skew(-10deg) rotate(-10deg) translateX(1rem);
 }
 
@@ -109,7 +116,7 @@ h1 {
 }
 
 .big {
-  font-size: 6rem;
+  font-size: 8rem;
 }
 
 @media (min-width: 400px) {
@@ -169,4 +176,57 @@ h1 {
 
 ::-moz-selection {
   background: #b4fdff;
+}
+
+
+.flash {
+    -webkit-animation: flash linear 1s infinite;
+    animation: flash linear 1s infinite;
+}
+
+@-webkit-keyframes flash {
+    0% { 
+	opacity: 1; 
+    }
+ 
+    50% { 
+	opacity: .1; 
+    }
+ 
+    100% { 
+	opacity: 1; 
+    }
+}
+
+@keyframes flash {
+    0% { 
+	opacity: 1; 
+    } 
+    
+    50% { 
+	opacity: .1; 
+    } 
+    
+    100% { 
+	opacity: 1; 
+  }
+}
+
+.pulse {
+    -webkit-animation: pulse linear 2s infinite;
+    animation: pulse linear 2s infinite;
+}
+
+@-webkit-keyframes pulse {
+    0% { 
+	font-size: 2.8rem; 
+    }
+ 
+    50% { 
+	font-size: 3rem; 
+    } 
+	
+    100% { 
+	font-size: 2.5rem; 
+    }
 }
