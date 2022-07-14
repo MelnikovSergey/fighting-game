@@ -1,4 +1,4 @@
-﻿body {
+body {
   color: white;
   background-color: black;
   font-family: "Press Start 2P", monospace;
@@ -153,7 +153,6 @@ h1 {
   }
 }
 
-/* Stole this idea from twilioquest, it's freaking sick. */
 .load {
   animation: load 800ms 500ms backwards;
 }
